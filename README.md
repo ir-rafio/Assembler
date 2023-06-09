@@ -14,20 +14,28 @@ Assembler is a Python-based project that facilitates the creation of the best po
 ```shell
 git clone https://github.com/rafio-iut/Assembler.git
 ```
-2. Install the required dependencies using pip:
+2. Install the 'pipenv' package globally using pip (if you haven't yet):
 ```shell
-pip install -r requirements.txt
+pip install pipenv
+```
+3. Install the project dependencies using pipenv:
+```shell
+pipenv install
 ```
 
 ## Usage
 1. Add your CodeForces handles to the 'handles.txt' file, with each handle separated by a newline.
 2. Open the 'main.py' file and set the values of the variables `teamCount` and `teamSize` according to your requirements. These variables determine the number of teams to be formed and the size of each team, respectively.
-3. Run the 'main.py' script:
+3. Activate the virtual environment:
+```shell
+pipenv shell
+```
+4. Run the project:
 ```shell
 python main.py
 ```
-4. The Assembler program will fetch the user data for the provided handles and generate the best possible teams for the programming competition based on the specified team count and team size.
-5. The generated teams will be displayed on the console output.
+5. The Assembler program will fetch the user data for the provided handles and generate the best possible teams for the programming competition based on the specified team count and team size.
+6. The generated teams will be displayed on the console output.
 
 ## Requirements
 - Python 3.x
