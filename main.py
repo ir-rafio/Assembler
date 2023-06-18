@@ -18,7 +18,7 @@ rdf = df.copy()
 for teamCount in teamCounts:
     teams, rdf = team.assemble(df, rdf, teamCount, teamSize, verbose=False)
     print(json.dumps(teams, indent=2))
-    with open('bestTeams.txt', 'w') as file: file.write(teams_json)
+    with open('bestTeams.txt', 'w') as file: file.write(json.dumps(teams, indent=2))
 
 
 # Restart
@@ -28,4 +28,4 @@ rdf = df.copy()
 for teamCount in teamCounts:
     teams, rdf = team.assemble(df, rdf, teamCount, teamSize, verbose=False)
     print(json.dumps(teams, indent=2))
-    with open('bestTeams.txt', 'w') as file: file.write(teams_json)
+    with open('bestTeams.txt', 'a') as file: file.write(json.dumps(teams, indent=2))
