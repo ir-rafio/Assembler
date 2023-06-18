@@ -19,24 +19,30 @@ Assembler is a Python-based project that facilitates the creation of the best po
    git clone https://github.com/rafio-iut/Assembler.git
    ```
 
-2. Install the `pipenv` package globally using `pip` (if not already installed):
+2. Install the `pipenv` package globally using `pip` if it is not already installed:
 
    ```shell
    pip install pipenv
    ```
 
-3. Open the command prompt or terminal in the project's root folder.
+3. Open the command prompt or terminal in the root folder of the project.
 4. Install the project dependencies using `pipenv`:
 
    ```shell
    pipenv install
    ```
 
+5. Generate necessary files from templates:
+   ```shell
+   python generate.py
+   ```
+   Note: This command will not overwrite existing files.
+
 ## Usage
 
 1. Add your CodeForces handles to the `handles.txt` file, with each handle separated by a newline.
-2. Open the `main.py` file and set the values of the variables `teamCount` and `teamSize` according to your requirements. These variables determine the number of teams to be formed and the size of the teams, respectively.
-3. Open the command prompt or terminal in the project's root folder.
+2. Open the `main.py` file and set the values of the variables `teamCount` and `teamSize` according to your requirements. These variables determine the number of teams to be formed and the size of each team, respectively.
+3. Open the command prompt or terminal in the root folder of the project.
 4. Activate the virtual environment:
 
    ```shell
@@ -49,12 +55,14 @@ Assembler is a Python-based project that facilitates the creation of the best po
    python main.py
    ```
 
-6. The Assembler program will fetch the user data for the provided handles and generate the best possible teams for programming competitions based on the specified team count and team size.
-7. The generated teams will be displayed on the console output.
+6. The program will fetch user data for the provided handles and generate the best possible teams for programming competitions based on the specified team count and team size.
+7. The generated teams will be displayed on the console output and saved in the `bestTeams.txt` file.
+
+   Note: Existing `bestTeams.txt` file will be overwritten.
 
 ## Uninstallation
 
-1. Open the command prompt or terminal in the project's root folder.
+1. Open the command prompt or terminal in the root folder of the project.
 2. Uninstall project dependencies:
 
    ```shell

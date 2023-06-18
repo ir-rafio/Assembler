@@ -13,7 +13,7 @@ def adjustDF(df):
     df['Max Rating'] *= df['Max Rating']
 
     wt = []
-    with open("weights.txt", "r") as file:
+    with open('weights.txt', 'r') as file:
         for line in file:
             weight = float(line.strip())
             wt.append(weight)
